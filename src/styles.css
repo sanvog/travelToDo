@@ -1,0 +1,30 @@
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: rgb(75, 9, 75);
+}
+
+h2 {
+  color: rgb(75, 9, 75);
+}
+
+h3 {
+  color: rgb(177, 91, 31);
+}
+
+button {
+  background-color: rgb(216, 20, 216);
+  color: #ffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.show {
+  display: inline-block;
+  margin: 8px;
+  background-color: rgb(109, 73, 109);
+}
