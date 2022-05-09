@@ -13,3 +13,16 @@
   background: #fff;
   border-radius: 10px;
 }
+
+.show {
+  display: inline-block;
+  margin: 8px;
+  background-color: rgb(109, 73, 109);
+}
+
+.sales-btn {
+  display: inline-block;
+  margin: 8px;
+  background-color: rgb(216, 20, 216);
+  text-transform: uppercase;
+}

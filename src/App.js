@@ -2,6 +2,7 @@ import "./styles.css";
 import { useState } from "react";
 import Title from "./components/Title";
 import Modal from "./components/Modal";
+import Eventlist from "./components/Eventlist";
 
 export default function App() {
   const [showEvents, setShowEvents] = useState(true);
@@ -31,6 +32,7 @@ export default function App() {
   };
 
   const subTitle = "Things I want to do in Vilnius today";
+
   return (
     <div className="App">
       <Title title="My daily travel schedule" subtitle={subTitle} />
@@ -49,20 +51,12 @@ export default function App() {
         </div>
       )}
       {showModal && (
-        <Modal handleClose={handleClose}>
+        <Modal handleClose={handleClose} isSalesModal={true}>
           <h2>Do you want free tickets to the Opera?</h2>
           <p> If so, say hi from Vilnius at reception </p>
         </Modal>
       )}
-      {showEvents &&
-        events.map((event, index) => (
-          <div key={events.id}>
-            <h3>
-              {index} - {event.title}
-            </h3>
-            <button onClick={() => handleClick(event.id)}>delete event</button>
-          </div>
-        ))}
+      {showEvents && <Eventlist events={events} handleClick={handleClick} />}
     </div>
   );
 }
